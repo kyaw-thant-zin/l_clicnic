@@ -1,10 +1,25 @@
 .t-hd01{
     padding:70px 0;
 }
+.sub-transaction {
+    .t-hd01 {
+        img {
+            height: 30px;
+            @include forsp {
+                width: auto;
+                height: 20px;
+            }
+        }
+    }
+}
 .sub-transaction_inner{
     margin:20px auto 50px;
     max-width: 1000px;
     width:100%;
+    @include forsp {
+        width: 90%;
+        margin: 20px auto 0px;
+    }
 }
 .transaction-tb{
     width:95%;

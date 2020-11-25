@@ -79,10 +79,19 @@
     }
                         
     .pp {
+        .t-hd01 {
+            img {
+                height: 30px;
+                @include forsp {
+                    width: auto;
+                    height: 20px;
+                }
+            }
+        }
         .inner {
             margin: 20px auto 0px;
             @include forsp {
-                width: 90%!important;
+                width: 90%;
             }
         }
     }
