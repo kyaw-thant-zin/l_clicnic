@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "FuturaBold";
+  src: url("assets/fonts/FuturaBoldCondensedBT.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+html {
+  background-color: #fff;
+}
+
+body {
+  background-color: #F2F6F7;
+  line-height: 1.8;
+  letter-spacing: 1.6px;
+  color: #5E5E5E;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-family: 'Noto Sans JP', sans-serif;
+  overflow-x: hidden;
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+  vertical-align: bottom;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  transition: 0.5s;
+  transition: 0.5s;
+  color: #000000;
+  &:hover {
+    opacity: .8;
+    transition: 0.5s;
+    transition: 0.5s;
+  }
+}
+
+.d_fl {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -webkit-flexbox;
+  display: -moz-flexbox;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+@supports (-webkit-overflow-scrolling:touch) {
+  /* CSS specific to iOS devices */
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  -moz-transform: $property;
+  transform: $property;
+}

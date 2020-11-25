@@ -1,0 +1,34 @@
+/* _media.scsss */
+
+$pc: 1024px;
+$note:1150px;
+$pad:980px;
+$tab:768px;
+$sp: 480px;
+@mixin forpc {
+  @media (max-width: ($tab)) {
+    @content;
+  }
+}
+
+@mixin forsp {
+    @media (max-width: ($tab)) {
+        @content;
+    }
+}
+
+.sp,
+.sp-only {
+    display: none;
+    @include forpc {
+        display: block !important;
+    }
+}
+
+.pc,
+.pc-only {
+    display: block;
+    @include forsp {
+        display: none !important;
+    }
+}

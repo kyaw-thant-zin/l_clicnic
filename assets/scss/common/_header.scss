@@ -1,0 +1,25 @@
+header {
+  background-color: #fff;
+}
+
+.hd-inner {
+  padding: 20px 0;
+  justify-content: space-between;
+  align-items: center;
+  .hd-contact {
+    width: 53%;
+    margin-left: auto;
+    li {
+      width: 42%;
+      &:first-child {
+        margin-right: 20px;
+      }
+    }
+  }
+}
+
+.logo {
+  width: 30%;
+  max-width: 375px;
+  padding-left: 30px;
+}
