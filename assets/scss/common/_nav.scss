@@ -1,7 +1,7 @@
 .menu-trigger {
   display: inline-block;
   position: relative;
-  right: 80px;
+  right: 5.5%;
   width: 60px;
   height: 60px;
   background-color: #5A9CD5;
@@ -14,6 +14,11 @@
   -moz-transition: all .4s;
   -ms-transition: all .4s;
   -o-transition: all .4s;
+  &.active {
+    span {
+      width: 70%;
+    }
+  }
   span {
     display: block;
     transition: all .4s;
@@ -41,12 +46,15 @@
       bottom: 20px;
     }
   }
+  @include forsp {
+    position: fixed;
+  }
 }
 
 .menu-trigger.active {
   span {
     &:nth-of-type(1) {
-      top: -19px;
+      top: 10px;
       -webkit-transform: translateY(20px) rotate(-45deg);
       transform: translateY(20px) rotate(-45deg);
       -moz-transform: translateY(20px) rotate(-45deg);
@@ -57,11 +65,109 @@
       opacity: 0;
     }
     &:nth-of-type(3) {
+      bottom: 7px;
       -webkit-transform: translateY(-20px) rotate(45deg);
       transform: translateY(-20px) rotate(45deg);
       -moz-transform: translateY(-20px) rotate(45deg);
       -ms-transform: translateY(-20px) rotate(45deg);
       -o-transform: translateY(-20px) rotate(45deg);
+    }
+  }
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+.nav-list.toggle {
+  display: block;
+}
+
+.nav-list {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #5A9CD5;
+  overflow: auto;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.nav-list ul {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.nav-list.toggle ul {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  @include forsp {
+    top: 50%;
+  }
+}
+
+.nav-list li {
+  padding-bottom: 10px;
+  &.under-nav {
+    padding-top: 30px;
+  }
+}
+
+.nav-list li:last-child {
+  border-bottom: 0px;
+}
+
+.nav-list li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  @include forsp {
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+.nav-contact {
+  position: absolute;
+  bottom: 0;
+  padding: 50px 0;
+  background: #fff;
+  width: 100%;
+  @include forsp {
+    padding: 0;
+    background: transparent
+  }
+  .d_fl {
+    width: 60%;
+    margin: 0 auto;
+    align-items: center;
+    @include forsp {
+      width: 100%;
+    }
+    a {
+      width: 35%;
+      @include forsp {
+        width: 50%;
+      }
+    }
+    .nav-tel {
+      margin-right: 30px;
+      @include forsp {
+        margin-right: 0;
+      }
     }
   }
 }
