@@ -54,3 +54,8 @@
       @include transform(translateX(-50%));
   }
 }
+
+.breadcrumbs p{
+  font-size: 14px;
+  columns: #5e5e5e;
+}
