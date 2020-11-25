@@ -80,6 +80,7 @@
                         
     .pp {
         .inner {
+            margin: 20px auto 0px;
             @include forsp {
                 width: 90%!important;
             }
