@@ -12,23 +12,23 @@ $sp: 480px;
 }
 
 @mixin forsp {
-    @media (max-width: ($tab)) {
-        @content;
-    }
+  @media (max-width: ($tab)) {
+    @content;
+  }
 }
 
 .sp,
 .sp-only {
-    display: none;
-    @include forpc {
-        display: block !important;
-    }
+  display: none;
+  @include forpc {
+    display: block !important;
+  }
 }
 
 .pc,
 .pc-only {
-    display: block;
-    @include forsp {
-        display: none !important;
-    }
+  display: block;
+  @include forsp {
+    display: none !important;
+  }
 }
