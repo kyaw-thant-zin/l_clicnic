@@ -1,0 +1,22 @@
+/* _media.scsss */
+.sp,
+.sp-only {
+  display: none;
+}
+@media (max-width: 768px) {
+  .sp,
+.sp-only {
+    display: block !important;
+  }
+}
+
+.pc,
+.pc-only {
+  display: block;
+}
+@media (max-width: 768px) {
+  .pc,
+.pc-only {
+    display: none !important;
+  }
+}
