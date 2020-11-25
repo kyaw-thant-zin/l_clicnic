@@ -56,10 +56,6 @@
                         }
                         
                         .ol-decimal01 {
-                            padding-left: 15px;
-                            @include forsp {
-                                padding-left: 0;
-                            }
                             li {
                                 &:after {
                                     content: counter(custom, decimal) ".";
